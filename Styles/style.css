@@ -151,7 +151,7 @@ main > section{
     margin-bottom: 10px;
 }
 
-.facts-name{
+.fact-name{
     font-size: 1.25rem;
     font-weight: 600;
     margin-top: 10px;
@@ -162,6 +162,61 @@ main > section{
 
 }
 
+/* features related style */
+.features{
+    gap: 100px;
+}
+#features-section-title{
+    font-size: 45px;
+    border-left: 5px solid #FF900E;
+    padding-left:20px ;
+}
+.feature-card, .feature-title{
+    font-weight: 600;
+    font-size: 1.12rem;
+    
+}
+.feature-card{
+    padding:30px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+
+
+
+/* our sponsors related styles */
+
+ .sponsor-info{
+     max-width: 540px;
+     margin: 50px auto;
+     text-align: center;
+     
+ }
+
+ .sponsors-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* justify-content: space-between; */
+ }
+ .sponsors-companies, .img{
+     filter: grayscale(100%);
+ }
+
+/* Footer section styles */
+
+.footer-section{
+    
+    text-align: center;
+    margin: 50px;
+    padding:10px;
+    gap: 20px;
+    background-color: #FFF4E7;
+
+}
+
+
 
 
 /* responsive media queary */
@@ -170,25 +225,40 @@ main > section{
     .nav-links,
     .teams{
         flex-direction: column;
+        
     }
 
-    .team-img-container{
-        grid-template-columns: repeat(1, 1fr);
+    .team-img-container, .facts-container, .sponsors-companies{
+        grid-template-columns: 1fr;
     }
+    .facts-container, .sponsors-companies{
+        justify-items: center;
+        gap: 24px;
+    }
+
     .our-features{
         margin-left: 20px;
-    }
+        
+      
+}
 }
 
 /* Medium Siza device  */
 @media screen and (min-width: 576px) and(max-width: 992px) {
     .teams{
-        flex-direction:column;
+        flex-direction: column;
 
     }
         
     .our-features{
         margin-left: 50px auto;
+    }
+    .facts-container{
+        gap: 24px;
+    }
+    .sponsors-companies, .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
     }
 }
 
